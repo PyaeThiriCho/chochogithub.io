@@ -60,4 +60,31 @@ function sayHello($name){
 }
     sayHello("John");
 
+
+
+
+//swap two variables using a temporary third variables
+
+$a=10;
+$b=20;
+$temp=$a;
+$a=$b;
+$b=$temp;
+echo "<br>";
+echo $a;
+echo "<br>";
+echo $b;
+
+//Check date types using var-dump()
+echo "<br>";
+var_dump($name);
+echo "<br>";
+var_dump($age);
+echo "<br>";
+var_dump($height);
+echo "<br>";
+var_dump($is_married);
+echo "<br>";
+var_dump($hobbies);
+
 ?>
