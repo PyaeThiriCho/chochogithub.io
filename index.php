@@ -87,4 +87,11 @@ var_dump($is_married);
 echo "<br>";
 var_dump($hobbies);
 
+
+
+
+
+
+
+
 ?>
