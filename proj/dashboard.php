@@ -5,6 +5,11 @@ if(!isset($_SESSION['login'])){
     exit();
 }
 
+//theme setup
+$theme=isset($_COOKIE['theme']) ? $_COOKIE['theme']:'light';
+$bg= $theme =='dark' ? '#222':'#fff';
+$color= $theme  =='dark'? '#fff' : '#222';
+
 ?>
 
 
@@ -17,8 +22,10 @@ if(!isset($_SESSION['login'])){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
-    <h1>Welcome dashboard</h1>
+<body style="background-color: <?php echo $bg; ?>; color: <?php echo $color; ?>;">
+    <h1>Welcome dashboard</h1> <?php echo $_SESSION['username']; ?>! |
+    <a href="logout.php">Logout</a>
+    <a href="switch_theme.php">Switch theme</a>
     <?php
     $students=[
         ["name"=>"Cho","grade"=>80],
